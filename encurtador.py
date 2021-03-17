@@ -11,10 +11,12 @@ class Encurtador:
 
     def load_dic(self):
         if path.exists(self.nome_arq):
-            print(self.nome_arq)
-            arq = open(self.nome_arq, "rb")
-            self.dic = load(arq)
-            arq.close()
+            try:
+                with open(self.nome_arq, "rb") as arq:
+                    self.dic = load(arq)
+            except:
+                print("Arquivo de Hash's vazio!")
+
         else:
             arq = open(self.nome_arq, "wb").close()
 
@@ -28,7 +30,7 @@ class Encurtador:
             return 0
         base = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         r = num % b
-        res = base[r];
+        res = base[r]
         q = floor(num / b)
         while q:
             r = q % b

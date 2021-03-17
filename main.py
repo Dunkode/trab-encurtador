@@ -18,7 +18,7 @@ while True:
 
 
     if escolha == 1:
-        url = input("Digite a URL (COM HTTPS://): ")
+        url = input("Digite a URL: ")
         print(u.encurtar(url))
         time.sleep(2)
         os.system("cls")
