@@ -23,8 +23,10 @@ while True:
         time.sleep(1)
         print("Encurtando URL...")
         time.sleep(2)
-        u.encurtar(url)
-        print("Concluído!!")  
+        small = u.encurtar(url)
+        print("Concluído!!")
+        time.sleep(2)
+        print(f"Nova URL: {u.takeInitiURL(url,small)}")
         time.sleep(2)
         print()
     

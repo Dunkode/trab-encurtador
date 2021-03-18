@@ -54,6 +54,7 @@ class Encurtador:
         self.dic[self.indice] = (url_encurtada, url)
         self.indice += 1
         self.save_dic()
+        return url_encurtada
 
     def buscar(self, url_curta):
         indice = self.to10(url_curta)
@@ -62,3 +63,12 @@ class Encurtador:
     def listar_urls(self):
         print(self.dic)
    
+    def takeInitiURL(self, url, smallUrl):
+        #print(url[url.find("/", 8)+1:])
+        numBar = url.find('/', 8)+1
+        newUrl=''
+        for i in range(0, numBar):
+            newUrl += url[i]
+        return newUrl+smallUrl
+        
+
