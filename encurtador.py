@@ -63,12 +63,12 @@ class Encurtador:
     def listar_urls(self):
         print(self.dic)
    
-    def takeInitiURL(self, url, smallUrl):
+    def takeInitiURL(self,smallUrl):
         #print(url[url.find("/", 8)+1:])
-        numBar = url.find('/', 8)+1
+        """numBar = url.find('/', 8)+1
         newUrl=''
         for i in range(0, numBar):
-            newUrl += url[i]
-        return newUrl+smallUrl
+            newUrl += url[i]"""
+        return "encurta.do/" + smallUrl
         
 
