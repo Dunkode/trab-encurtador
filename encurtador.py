@@ -28,7 +28,7 @@ class Encurtador:
     def toBase(self, num, b = 62):
         if b <= 0 or b > 62:
             return 0
-        base = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        base = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
         r = num % b
         res = base[r]
         q = floor(num / b)
@@ -39,7 +39,7 @@ class Encurtador:
         return res
 
     def to10(self, num, b = 62):
-        base = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        base = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
         limit = len(num)
         res = 0
         for i in range(limit):
@@ -50,8 +50,7 @@ class Encurtador:
         ##url = url[url.find("/", 8)+1:]
         
         url_encurtada = self.toBase(self.indice)
-        print(url_encurtada)
-
+        
         self.dic[self.indice] = (url_encurtada, url)
         self.indice += 1
         self.save_dic()
